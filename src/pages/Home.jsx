@@ -17,9 +17,9 @@ const Home = () => {
         <div className="container">
           <motion.div
             className="hero__content"
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5 }}
           >
             <h1 className="hero__name">Michael A. Melendez</h1>
             <p className="hero__roles">
@@ -51,11 +51,10 @@ const Home = () => {
             />
           </div>
           <div className="featured-projects__grid">
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <ProjectCard
                 key={project.id}
                 {...project}
-                delay={index * 0.1}
               />
             ))}
           </div>
@@ -71,19 +70,15 @@ const Home = () => {
           />
           <motion.div
             className="skills__grid"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.3 }}
           >
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
                 className="skills__item"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ scale: 1.05, y: -4 }}
               >
                 {skill}

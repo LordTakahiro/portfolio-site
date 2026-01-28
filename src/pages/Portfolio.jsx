@@ -14,11 +14,10 @@ const Portfolio = () => {
           />
 
           <div className="portfolio__grid">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <ProjectCard
                 key={project.id}
                 {...project}
-                delay={index * 0.1}
               />
             ))}
           </div>

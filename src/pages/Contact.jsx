@@ -16,9 +16,8 @@ const Contact = () => {
           <div className="contact__content">
             <motion.div
               className="contact__info"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
             >
               <div className="contact__item">
                 <div className="contact__icon">
@@ -73,9 +72,10 @@ const Contact = () => {
 
             <motion.div
               className="contact__cta"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.3 }}
             >
               <h3>Ready to Work Together?</h3>
               <p>

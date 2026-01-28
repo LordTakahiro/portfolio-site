@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 import Button from './Button';
 import './ProjectCard.css';
 
-const ProjectCard = ({ title, description, tags, notionUrl, image, delay = 0 }) => {
+const ProjectCard = ({ title, description, tags, notionUrl, image }) => {
   return (
     <motion.div
       className="project-card"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.5, delay }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: 0.3 }}
       whileHover={{ y: -8 }}
     >
       {image && (
         <div className="project-card__image">
-          <img src={image} alt={title} />
+          <img src={image} alt={title} loading="lazy" />
         </div>
       )}
 

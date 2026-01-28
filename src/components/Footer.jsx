@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer__container">
         <p className="footer__text">
-          &copy; {currentYear} Michael A. Melendez. Built with React & Framer Motion.
+          &copy; {currentYear} Michael A. Melendez.
         </p>
         <div className="footer__links">
           <a

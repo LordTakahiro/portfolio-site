@@ -16,10 +16,8 @@ const Philosophy = () => {
             {/* My Approach */}
             <motion.section
               className="philosophy__section"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
             >
               <h3 className="philosophy__section-title">My Approach to Game Design</h3>
               <div className="philosophy__text">
@@ -37,10 +35,10 @@ const Philosophy = () => {
             {/* Core Principles */}
             <motion.section
               className="philosophy__section"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.3 }}
             >
               <h3 className="philosophy__section-title">Core Principles</h3>
               <div className="philosophy__principles">
@@ -95,10 +93,10 @@ const Philosophy = () => {
             {/* What I Value */}
             <motion.section
               className="philosophy__section"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.3 }}
             >
               <h3 className="philosophy__section-title">What I Value</h3>
               <div className="philosophy__text">
@@ -116,10 +114,10 @@ const Philosophy = () => {
             {/* Why I Design */}
             <motion.section
               className="philosophy__section philosophy__section--last"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.3 }}
             >
               <h3 className="philosophy__section-title">Why I Design</h3>
               <div className="philosophy__text">
