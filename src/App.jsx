@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -7,6 +8,30 @@ import Philosophy from './pages/Philosophy';
 import Contact from './pages/Contact';
 
 function App() {
+
+  useEffect(() => {
+    // Load Plausible script
+    const script = document.createElement('script');
+    script.setAttribute('async', '');
+    script.setAttribute(
+      'src',
+      'https://plausible.io/js/pa-Wz9135KhLTe8voomm0uwT.outbound-links.js'
+    );
+    document.head.appendChild(script);
+
+    // Initialize Plausible
+    const initScript = document.createElement('script');
+    initScript.innerHTML = `
+      window.plausible = window.plausible || function () {
+        (plausible.q = plausible.q || []).push(arguments)
+      }, plausible.init = plausible.init || function (i) {
+        plausible.o = i || {}
+      };
+      plausible.init()
+    `;
+    document.head.appendChild(initScript);
+  }, []);
+
   return (
     <Router>
       <Layout>
