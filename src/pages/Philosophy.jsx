@@ -55,7 +55,7 @@ const Philosophy = () => {
                 <div className="philosophy__principle">
                   <h4>2. Narrative and Mechanics Must Serve Each Other</h4>
                   <p>
-                    Story isn't cutscenes—it's the emotional meaning behind player actions. I build worlds that
+                    Story isn't cutscenes, it's the emotional meaning behind player actions. I build worlds that
                     justify mechanics, mechanics that reinforce themes, and characters whose arcs reflect the
                     systems around them.
                   </p>
