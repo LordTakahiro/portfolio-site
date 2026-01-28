@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Michael A. Melendez logo icon">
+  <defs>
+    <!-- Soft inner glow behind the rune -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#7f7dff"></stop>
+      <stop offset="35%" stop-color="#3a2b87"></stop>
+      <stop offset="100%" stop-color="#05030c"></stop>
+    </radialGradient>
+
+    <!-- Outer ring gradient (blue-purple arcane ring) -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c0b5ff"></stop>
+      <stop offset="50%" stop-color="#7b5dff"></stop>
+      <stop offset="100%" stop-color="#58d0ff"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded-square base so it looks good in tabs and shortcuts -->
+  <rect width="64" height="64" rx="16" fill="#02010a"></rect>
+
+  <!-- Glowing inner disc -->
+  <circle cx="32" cy="32" r="23" fill="url(#bgGlow)"></circle>
+
+  <!-- Arcane ring -->
+  <circle cx="32" cy="32" r="23" fill="none" stroke="url(#ringGrad)" stroke-width="2"></circle>
+
+  <!-- Stylized M rune (systems / magic monogram) -->
+  <path d="M18 44 L18 20 L32 36 L46 20 L46 44" fill="none" stroke="#e5e6ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Small core node at center -->
+  <circle cx="32" cy="32" r="3" fill="#ffffff"></circle>
+</svg>

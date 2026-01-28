@@ -1,0 +1,145 @@
+/* Hero Section */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--section-padding) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(2px) saturate(0.7); 
+  z-index: -2;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.35) 100%);
+  z-index: -1;
+}
+
+.hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__name {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+.hero__roles {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero__intro {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Featured Projects */
+.featured-projects {
+  background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.02) 100%);
+}
+
+.featured-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Skills Grid */
+.skills {
+  background: var(--color-surface);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.skills__item {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: all var(--transition-smooth);
+  cursor: default;
+}
+
+.skills__item:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero__intro {
+    font-size: 1rem;
+  }
+
+  .featured-projects__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .skills__item {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

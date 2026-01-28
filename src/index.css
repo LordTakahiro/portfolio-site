@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System Variables */
+:root {
+  /* Colors */
+  --color-bg: #0F0F0F;
+  --color-surface: #1A1A1A;
+  --color-text: #FFFFFF;
+  --color-text-muted: #A1A1AA;
+  --color-accent: #6366F1;
+  --color-accent-hover: #4F46E5;
+
+  /* Typography */
+  --font-header: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --section-padding: 64px;
+  --card-padding: 24px;
+  --max-width: 1200px;
+
+  /* Transitions */
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utility Classes */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 48px;
+    --card-padding: 16px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
