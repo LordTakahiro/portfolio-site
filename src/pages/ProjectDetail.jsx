@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '../data/projects';
+import { projectContent } from '../data/projectContent';
 import Button from '../components/Button';
 import './ProjectDetail.css';
 
@@ -8,6 +9,7 @@ const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const project = projects.find(p => p.slug === slug);
+  const content = projectContent[slug];
 
   if (!project) {
     return (
@@ -19,6 +21,24 @@ const ProjectDetail = () => {
       </div>
     );
   }
+
+  const renderContent = (item) => {
+    if (typeof item === 'string') {
+      // Check if the line starts with ** (bold markdown)
+      if (item.startsWith('**') && item.includes('**')) {
+        const parts = item.split('**');
+        return (
+          <p key={item}>
+            {parts.map((part, i) => (
+              i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+            ))}
+          </p>
+        );
+      }
+      return <p key={item}>{item}</p>;
+    }
+    return null;
+  };
 
   return (
     <div className="project-detail">
@@ -67,30 +87,70 @@ const ProjectDetail = () => {
 
                 <div className="project-detail__actions">
                   <Button variant="primary" href={project.notionUrl}>
-                    View on Notion
+                    Also Available on Notion
                   </Button>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          <motion.div
-            className="project-detail__content"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.3 }}
-          >
-            <h2>Overview</h2>
-            <p>{project.description}</p>
+          {content && (
+            <motion.div
+              className="project-detail__content"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="project-detail__section">
+                <h2>Overview</h2>
+                <p>{content.overview}</p>
+              </div>
 
-            <div className="project-detail__cta">
-              <p>For full project details, documentation, and in-depth analysis, visit the Notion page.</p>
-              <Button variant="primary" href={project.notionUrl}>
-                View Complete Project on Notion
-              </Button>
-            </div>
-          </motion.div>
+              {content.sections.map((section, index) => (
+                <motion.div
+                  key={index}
+                  className="project-detail__section"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-100px' }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <h2>{section.title}</h2>
+
+                  {section.content && (
+                    <div className="project-detail__section-content">
+                      {section.content.map((item, i) => renderContent(item))}
+                    </div>
+                  )}
+
+                  {section.items && (
+                    <div className="project-detail__items">
+                      {section.items.map((item, i) => (
+                        typeof item === 'string' ? (
+                          <div key={i} className="project-detail__list-item">
+                            {renderContent(item)}
+                          </div>
+                        ) : (
+                          <div key={i} className="project-detail__item">
+                            {item.subtitle && <h3>{item.subtitle}</h3>}
+                            <p>{item.text}</p>
+                          </div>
+                        )
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+
+              <div className="project-detail__cta">
+                <p>This project is also available with additional formatting and media on Notion.</p>
+                <Button variant="primary" href={project.notionUrl}>
+                  View on Notion
+                </Button>
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
     </div>
