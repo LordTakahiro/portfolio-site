@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { projects } from '../data/projects';
 import { projectContent } from '../data/projectContent';
 import Button from '../components/Button';
+import ImageCarousel from '../components/ImageCarousel';
 import './ProjectDetail.css';
 
 const ProjectDetail = () => {
@@ -49,13 +50,12 @@ const ProjectDetail = () => {
             initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <Button
-              variant="secondary"
+            <button
               onClick={() => navigate('/portfolio')}
-              className="project-detail__back"
+              className="project-detail__back-button"
             >
               ← Back to Portfolio
-            </Button>
+            </button>
 
             <div className="project-detail__hero">
               <div className="project-detail__hero-image">
@@ -106,6 +106,19 @@ const ProjectDetail = () => {
                 <h2>Overview</h2>
                 <p>{content.overview}</p>
               </div>
+
+              {content.carouselImages && content.carouselImages.length > 0 && (
+                <motion.div
+                  className="project-detail__section"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-100px' }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <h2>Gallery</h2>
+                  <ImageCarousel images={content.carouselImages} />
+                </motion.div>
+              )}
 
               {content.sections.map((section, index) => (
                 <motion.div

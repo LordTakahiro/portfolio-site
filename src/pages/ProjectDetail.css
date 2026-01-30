@@ -3,8 +3,27 @@
   padding-top: 80px;
 }
 
-.project-detail__back {
+.project-detail__back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
   margin-bottom: 2rem;
+}
+
+.project-detail__back-button:hover {
+  background: var(--color-accent);
+  color: white;
+  transform: translateX(-4px);
 }
 
 .project-detail__hero {

@@ -1,6 +1,30 @@
+// Import card images
+import eyeOfNythgoth from '../assets/Eye of Nyth\'goth.png';
+import returnFromGrave from '../assets/Return from the Grave.png';
+import sanguineSanctum from '../assets/Sanguine Sanctum.png';
+import scarSwornKnight from '../assets/Scar-Sworn Knight.png';
+import velnecros from '../assets/Vel\'necros, Archlich of the Withering Veil.png';
+
+// Import Unity test images
+import mainTest from '../assets/main test.png';
+import testImage0 from '../assets/test image 0.png';
+import testImage1 from '../assets/test image 1.png';
+import testImage2 from '../assets/test image 2.png';
+import testImage3 from '../assets/test image 3.png';
+import testImage4 from '../assets/test image 4.png';
+import testImage5 from '../assets/test image 5.png';
+
 export const projectContent = {
   "champions-of-rymora": {
     overview: "Champions of Rymora is a fully original strategic trading card game featuring zone-based combat, hidden information, reactive timing windows, and faction-driven deckbuilding. The project includes a complete rules engine, 300+ card prototypes, faction identities, and a full gameplay loop designed for competitive and casual play.",
+
+    carouselImages: [
+      { src: eyeOfNythgoth, alt: "Eye of Nyth'goth Card", caption: "Eye of Nyth'goth" },
+      { src: returnFromGrave, alt: "Return from the Grave Card", caption: "Return from the Grave" },
+      { src: sanguineSanctum, alt: "Sanguine Sanctum Card", caption: "Sanguine Sanctum" },
+      { src: scarSwornKnight, alt: "Scar-Sworn Knight Card", caption: "Scar-Sworn Knight" },
+      { src: velnecros, alt: "Vel'necros, Archlich of the Withering Veil Card", caption: "Vel'necros, Archlich of the Withering Veil" }
+    ],
 
     sections: [
       {
@@ -120,6 +144,16 @@ export const projectContent = {
 
   "unity-battle-system": {
     overview: "A fully functional, pixel-art style 2D turn-based battle system built in Unity and designed for modular integration into any RPG project. Originally developed as part of a larger game with quests, inventory, shops, and scene management, the system was later extracted and refactored into a standalone framework for potential commercial release.",
+
+    carouselImages: [
+      { src: mainTest, alt: "Unity Battle System Main Screen", caption: "Main Battle Screen" },
+      { src: testImage0, alt: "Combat UI", caption: "Combat Interface" },
+      { src: testImage1, alt: "Magic Menu", caption: "Magic System" },
+      { src: testImage2, alt: "Item Usage", caption: "Item Usage" },
+      { src: testImage3, alt: "Battle Rewards", caption: "Victory Screen" },
+      { src: testImage4, alt: "Game Over Screen", caption: "Game Over State" },
+      { src: testImage5, alt: "Battle Scene", caption: "Battle Environment" }
+    ],
 
     sections: [
       {
