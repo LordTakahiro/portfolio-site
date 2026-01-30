@@ -135,7 +135,7 @@ const ProjectDetail = () => {
                   <h2>Gallery</h2>
                   <ImageCarousel
                     images={content.carouselImages}
-                    height={slug === 'champions-of-rymora' ? 700 : 600}
+                    height={slug === 'champions-of-rymora' ? 800 : 600}
                   />
                 </motion.div>
               )}
