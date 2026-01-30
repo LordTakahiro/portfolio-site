@@ -10,7 +10,7 @@ const Portfolio = () => {
         <div className="container">
           <SectionHeader
             title="Portfolio"
-            subtitle="A comprehensive collection of my game design, narrative, and technical projects. (Links go to Notion pages)"
+            subtitle="A comprehensive collection of my game design, narrative, and technical projects."
           />
 
           <div className="portfolio__grid">
