@@ -138,12 +138,22 @@ export const projectContent = {
           "How to structure a game for long-term scalability",
           "How to collaborate on a multi-year design project"
         ]
+      },
+      {
+        title: "Request Full Rules",
+        content: [
+          "Full ruleset available upon request for hiring managers or collaborators."
+        ]
       }
     ]
   },
 
   "unity-battle-system": {
     overview: "A fully functional, pixel-art style 2D turn-based battle system built in Unity and designed for modular integration into any RPG project. Originally developed as part of a larger game with quests, inventory, shops, and scene management, the system was later extracted and refactored into a standalone framework for potential commercial release.",
+
+    links: [
+      { title: "Watch Video Demo", url: "https://youtu.be/S38Y-rttv64?si=wyMtzLOMOjJPTTVf", type: "youtube" }
+    ],
 
     carouselImages: [
       { src: mainTest, alt: "Unity Battle System Main Screen", caption: "Main Battle Screen" },
@@ -273,6 +283,12 @@ export const projectContent = {
   "fal-shari": {
     overview: "This lore bible details the origins, evolution, and ideology of the Fal'shari, a siphon-based fel research order founded by Seraphine Dawnseeker and later expanded through her collaboration with Doctor Aldrich Sinclaire. The project integrates directly into World of Warcraft's timeline, locations, and magical cosmology, while introducing two original characters whose arcs intertwine through ambition, catastrophe, and shared obsession.",
 
+    links: [
+      { title: "Seraphine's Journal", url: "https://docs.google.com/document/d/11qhFr_j_sT-mtXf_RRfTCN-NZMHsexvKLf0ZxtPPk4k/edit?usp=drive_link", type: "document" },
+      { title: "Aldrich's Research Notes", url: "https://docs.google.com/document/d/16QOBB9tSAEUihH8L97p45uhUygNCS8MtVJXQTd1Cssk/edit?usp=drive_link", type: "document" },
+      { title: "Seraphine's Address to the Fal'shari", url: "https://docs.google.com/document/d/16tfl-M77CSCprxUiDfyGNhZny0dvwEnnKaAPIQvhImU/edit?usp=drive_link", type: "document" }
+    ],
+
     sections: [
       {
         title: "The Fal'shari \"The Hungering Touch\"",
@@ -381,6 +397,12 @@ export const projectContent = {
 
   "fangs-oneshot": {
     overview: "Fangs of the Frost Wyrm is a complete 3–5 hour D&D 5e one-shot adventure designed for 4th-level characters. It focuses on wilderness survival, environmental pressure, and a climactic confrontation with a juvenile white dragon. The adventure includes a full narrative arc, tactical encounters, environmental hazards, and a structured lair battle.",
+
+    links: [
+      { title: "Download Main Adventure", url: "https://drive.google.com/uc?export=download&id=1ozGTcSxEbrksd9puRn-12caCFMx2JmwP", type: "download" },
+      { title: "Download Companion Guide", url: "https://drive.google.com/uc?export=download&id=1rSnRhl79ZS4XV2BwNrJsrvEc28QUzJss", type: "download" },
+      { title: "Download Player Resources", url: "https://drive.google.com/uc?export=download&id=1M63_JDrhgYsCApkl6j-Vqyw5pdx4tudP", type: "download" }
+    ],
 
     sections: [
       {

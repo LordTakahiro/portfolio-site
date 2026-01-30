@@ -84,12 +84,6 @@ const ProjectDetail = () => {
                     </span>
                   ))}
                 </div>
-
-                <div className="project-detail__actions">
-                  <Button variant="primary" href={project.notionUrl}>
-                    Also Available on Notion
-                  </Button>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -106,6 +100,29 @@ const ProjectDetail = () => {
                 <h2>Overview</h2>
                 <p>{content.overview}</p>
               </div>
+
+              {content.links && content.links.length > 0 && (
+                <motion.div
+                  className="project-detail__section"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-100px' }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <h2>Resources</h2>
+                  <div className="project-detail__links">
+                    {content.links.map((link, index) => (
+                      <Button
+                        key={index}
+                        variant="primary"
+                        href={link.url}
+                      >
+                        {link.title}
+                      </Button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
 
               {content.carouselImages && content.carouselImages.length > 0 && (
                 <motion.div
