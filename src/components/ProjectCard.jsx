@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import './ProjectCard.css';
 
-const ProjectCard = ({ title, description, tags, notionUrl, image }) => {
+const ProjectCard = ({ slug, title, description, tags, notionUrl, image }) => {
+  const navigate = useNavigate();
   return (
     <motion.div
       className="project-card"
@@ -32,8 +34,11 @@ const ProjectCard = ({ title, description, tags, notionUrl, image }) => {
       </div>
 
       <div className="project-card__footer">
-        <Button variant="secondary" href={notionUrl}>
-          View Project
+        <Button variant="secondary" onClick={() => navigate(`/project/${slug}`)}>
+          View Details
+        </Button>
+        <Button variant="primary" href={notionUrl}>
+          Notion Page
         </Button>
       </div>
     </motion.div>
