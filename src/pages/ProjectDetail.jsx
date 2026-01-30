@@ -133,7 +133,10 @@ const ProjectDetail = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <h2>Gallery</h2>
-                  <ImageCarousel images={content.carouselImages} />
+                  <ImageCarousel
+                    images={content.carouselImages}
+                    height={slug === 'champions-of-rymora' ? 700 : 600}
+                  />
                 </motion.div>
               )}
 

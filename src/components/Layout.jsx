@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ScrollToTopButton from './ScrollToTopButton';
 
 const Layout = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
         {children}
       </motion.main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

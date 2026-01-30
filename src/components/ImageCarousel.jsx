@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './ImageCarousel.css';
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images, height = 600 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -21,7 +21,7 @@ const ImageCarousel = ({ images }) => {
 
   return (
     <div className="carousel">
-      <div className="carousel__container">
+      <div className="carousel__container" style={{ height: `${height}px` }}>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -35,6 +35,7 @@ const ImageCarousel = ({ images }) => {
               src={images[currentIndex].src}
               alt={images[currentIndex].alt || `Slide ${currentIndex + 1}`}
               className="carousel__image"
+              style={{ maxHeight: `${height - 80}px` }}
             />
             {images[currentIndex].caption && (
               <p className="carousel__caption">{images[currentIndex].caption}</p>

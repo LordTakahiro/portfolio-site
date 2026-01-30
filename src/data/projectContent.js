@@ -270,12 +270,6 @@ export const projectContent = {
           "How to prepare a Unity package for commercial release",
           "How to design for both player experience and developer usability"
         ]
-      },
-      {
-        title: "Video Demo",
-        content: [
-          "Unity Turn-Based Battle System — YouTube"
-        ]
       }
     ]
   },
