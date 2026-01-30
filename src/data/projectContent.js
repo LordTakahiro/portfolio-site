@@ -544,12 +544,12 @@ export const projectContent = {
         content: [
           "Two college students, Josh and Ashley, vanish during a weekend trip to a remote lake. After two weeks with no contact, their friends decide to retrace their route themselves. What they find is a stretch of forested highway where:",
           "",
-          "- the trees do not move in the wind",
-          "- the fog induces unnatural sleep",
-          "- the road seems to isolate them from the outside world",
-          "- and something human-shaped appears in the mist",
+          "- The trees do not move in the wind",
+          "- The fog induces unnatural sleep",
+          "- The road seems to isolate them from the outside world",
+          "- Something human-shaped appears in the mist",
           "",
-          "Their search becomes a fight for survival as the group realizes the disappearance wasn't an accident — and the region itself may be predatory."
+          "Their search becomes a fight for survival as the group realizes the disappearance wasn't an accident, and the region itself may be predatory."
         ]
       },
       {
