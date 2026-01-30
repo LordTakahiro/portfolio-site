@@ -157,12 +157,12 @@ export const projectContent = {
 
     carouselImages: [
       { src: mainTest, alt: "Unity Battle System Main Screen", caption: "Main Battle Screen" },
-      { src: testImage0, alt: "Combat UI", caption: "Combat Interface" },
-      { src: testImage1, alt: "Magic Menu", caption: "Magic System" },
-      { src: testImage2, alt: "Item Usage", caption: "Item Usage" },
+      { src: testImage0, alt: "Combat UI", caption: "Magic Interfacee" },
+      { src: testImage1, alt: "Magic Menu", caption: "Targetting Interface" },
+      { src: testImage2, alt: "Item Usage", caption: "Magic Usage" },
       { src: testImage3, alt: "Battle Rewards", caption: "Victory Screen" },
       { src: testImage4, alt: "Game Over Screen", caption: "Game Over State" },
-      { src: testImage5, alt: "Battle Scene", caption: "Battle Environment" }
+      { src: testImage5, alt: "Battle Scene", caption: "Item Interface" }
     ],
 
     sections: [
