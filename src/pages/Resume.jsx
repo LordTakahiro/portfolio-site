@@ -19,7 +19,7 @@ const Resume = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <Button href="#" variant="primary">
+            <Button href="/Michael_Melendez_Game_Design_Resume.pdf" variant="primary" download>
               Download PDF
             </Button>
           </motion.div>

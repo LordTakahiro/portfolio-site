@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import './Button.css';
 
-const Button = ({ children, variant = 'primary', href, onClick, ...props }) => {
+const Button = ({ children, variant = 'primary', href, onClick, download, ...props }) => {
   const buttonClass = `btn btn-${variant}`;
 
   const buttonContent = (
@@ -19,7 +19,7 @@ const Button = ({ children, variant = 'primary', href, onClick, ...props }) => {
 
   if (href) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block' }}>
+      <a href={href} target="_blank" rel="noopener noreferrer" download={download} style={{ display: 'inline-block' }}>
         {buttonContent}
       </a>
     );
