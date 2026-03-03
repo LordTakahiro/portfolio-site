@@ -1,3 +1,16 @@
+// Import Triarchy Legendary Hero frames
+import baelFrame from '../assets/BaelFrame.png';
+import calypsa from '../assets/CalypsaFrame.png';
+import cernunn from '../assets/CernunnFrame.png';
+import khorrathFrame from '../assets/KhorrathFrame.png';
+import kira6Frame from '../assets/Kira6Frame.png';
+import malachaiFrame from '../assets/MalachaiFrame.png';
+import nyrathisFrame from '../assets/NyrathisFrame.png';
+import pucklynFrame from '../assets/PucklynFrame.png';
+import sarathielFrame from '../assets/SarathielFrame.png';
+import sekhmetFrame from '../assets/SekhmetFrame.png';
+import sigrunFrame from '../assets/SigrunFrame.png';
+
 // Import card images
 import eyeOfNythgoth from '../assets/Eye of Nyth\'goth.png';
 import returnFromGrave from '../assets/Return from the Grave.png';
@@ -655,6 +668,134 @@ export const projectContent = {
           "Built a grounded 90s setting without modern technology",
           "Crafted interpersonal dynamics that heighten the horror",
           "Designed the \"Crestfall region\" as a character in itself"
+        ]
+      }
+    ]
+  },
+
+  "triarchy-houses-of-mythos": {
+    overview: "Triarchy: Houses of Mythos is a mobile gacha RPG where players collect heroes, join guilds called Houses, and form 3-way alliances called Triarchies. Every 90 days, alliances dissolve and reform — creating Game of Thrones-style server politics in a mobile idle RPG framework. The project features a complete GDD (v2.0), a working Godot 4 prototype with combat, gacha, hero database, cloud save, and Firebase backend.",
+
+    aiArtNotice: "All character art shown is AI-generated placeholder art used during early production. The game is currently in active development and I am actively seeking investors to fund professional character art, battle sprites, and VFX for the full 66-hero launch roster.",
+
+    carouselImages: [
+      { src: sarathielFrame, alt: "Sarathiel – Angelic Legendary Hero", caption: "Sarathiel (Angelic)" },
+      { src: baelFrame, alt: "Bael – Infernal Legendary Hero", caption: "Bael (Infernal)" },
+      { src: nyrathisFrame, alt: "Nyrathis – Undead Legendary Hero", caption: "Nyrathis (Undead)" },
+      { src: sekhmetFrame, alt: "Sekhmet – Egyptian Legendary Hero", caption: "Sekhmet (Egyptian)" },
+      { src: sigrunFrame, alt: "Sigrun – Norse Legendary Hero", caption: "Sigrun (Norse)" },
+      { src: khorrathFrame, alt: "Khorrrath – Draconic Legendary Hero", caption: "Khorrath (Draconic)" },
+      { src: malachaiFrame, alt: "Malachai – Shadow Legendary Hero", caption: "Malachai (Shadow)" },
+      { src: cernunn, alt: "Cernunn – Gaia Legendary Hero", caption: "Cernunn (Gaia)" },
+      { src: calypsa, alt: "Calyssa – Aquatic Legendary Hero", caption: "Calyssa (Aquatic)" },
+      { src: pucklynFrame, alt: "Pucklyn – Fae Legendary Hero", caption: "Pucklyn (Fae)" },
+      { src: kira6Frame, alt: "Kira – Futuristic Legendary Hero", caption: "Kira (Futuristic)" }
+    ],
+
+    sections: [
+      {
+        title: "Core Innovation",
+        content: [
+          "**Tagline:** \"The Mobile RPG Where Guilds Form Nations\"",
+          "**The Hook:** Seasonal guild alliances (Triarchies) that reset every 90 days, creating ever-shifting server politics and preventing meta stagnation.",
+          "**Genre:** Gacha RPG + Guild Strategy + Idle/Auto-Battle",
+          "**Platform:** iOS & Android (Godot 4 mobile export)",
+          "**Market Gap:** The only mobile RPG combining gacha hero collection with meaningful 3-way guild alliances and mandatory seasonal resets — competitors like Raid: Shadow Legends, AFK Arena, and Idle Heroes each lack one or more of these pillars."
+        ]
+      },
+      {
+        title: "Hero System",
+        items: [
+          {
+            subtitle: "132 Heroes Designed — 66 at Launch",
+            text: "All 132 heroes are fully designed with stats, abilities, and tribal identities. Launch ships 66 heroes (6 per tribe across 11 tribes), with the remaining 66 rolling out as post-launch content. This reduces initial art cost while building a ready pipeline of future updates."
+          },
+          {
+            subtitle: "11 Tribes with Unique Synergies",
+            text: "Undead, Infernal, Angelic, Gaia, Aquatic, Futuristic, Egyptian, Norse, Draconic, Shadow, and Fae. Each tribe has distinct mechanics and a tribal synergy bonus that activates when 3+ heroes of the same tribe are on a team."
+          },
+          {
+            subtitle: "4 Rarity Tiers",
+            text: "Common (70% pull rate), Rare (20%), Epic (9%), Legendary (1%) with a pity system guaranteeing 1 Epic every 10 pulls and 1 Legendary every 100 pulls."
+          },
+          {
+            subtitle: "Deep Progression",
+            text: "Heroes level from 1–60, promote from 1★ to 5★ via shards, and equip 4 gear slots (weapon, armor, 2 accessories) enhanceable to +15. A hidden archetype system (Glass Cannon, Bruiser, Speed Demon, Tank, Balanced) adds further differentiation within rarity tiers."
+          }
+        ]
+      },
+      {
+        title: "Combat System",
+        items: [
+          {
+            subtitle: "Turn-Based Auto-Battle with Manual Control",
+            text: "5v5 battles with turn order determined by SPD stat. Players can run fully automated or manually trigger hero abilities. Energy builds through auto-attacks, passive gain, and taking damage."
+          },
+          {
+            subtitle: "Damage Formula",
+            text: "Physical damage: ATK − (DEF × 0.5) with ±10% variance and critical hit multiplier. Magic damage: ATK × ability multiplier reduced by M.RES percentage. Abilities never crit and have no random variance — creating a consistent high-stakes feel."
+          },
+          {
+            subtitle: "Status Effects & Tribal Synergies",
+            text: "Stun, Burn, Freeze, Poison, HoT, ATK/DEF Buff, and Shield. Tribal bonuses activate at 3+ matching heroes — e.g. Draconic grants +25% ATK / −10% DEF (berserker), Norse gains immunity to Freeze, Shadow ensures the first hit always crits."
+          }
+        ]
+      },
+      {
+        title: "Social Systems — Triarchy Politics",
+        items: [
+          {
+            subtitle: "Houses (Guilds)",
+            text: "Up to 30 members per House, with ranked roles (Head, Hand, Sworn Sword, Retainer). Houses level 1–50 through gold and stone donations, unlocking combat bonuses for all members. Each House aligns with one of the 11 tribes and chooses a name from 80 available tribal names."
+          },
+          {
+            subtitle: "Triarchies (3-Way Alliances)",
+            text: "Three Houses form a Triarchy through a 7-day voting process requiring 70% approval from each House. Triarchies receive bonuses based on their tribal composition (Dark, Holy, Nature, Tech/War, or Balanced) and gain access to a private Triumvirate leadership chat."
+          },
+          {
+            subtitle: "Territory Wars",
+            text: "50 territories per server ranging from Minor (10K gold/day) to Capital (500K gold/day + Legendary shards). Territory Wars run every weekend. Capitals are defended by NPC teams — conquest requires 3 wins within 24 hours."
+          },
+          {
+            subtitle: "Seasonal Reset",
+            text: "Every 90 days, all Triarchies dissolve, rewards are distributed based on season rankings, and the political board resets. This prevents dominant alliance lock-in and forces fresh diplomacy every season — the core differentiator from all competitors."
+          }
+        ]
+      },
+      {
+        title: "Technical Architecture",
+        items: [
+          {
+            subtitle: "Engine & Stack",
+            text: "Godot 4.x with GDScript. Firebase Realtime Database + Cloud Functions for backend. Mobile export to iOS/Android."
+          },
+          {
+            subtitle: "Implemented Systems",
+            text: "BattleState.gd (full combat state machine), HeroDatabase.gd (132 heroes from JSON), HeroData.gd (stat calculation, leveling, star promotion), EquipmentDatabase.gd (random generation, rarity scaling), PlayerData.gd (autoload with cloud save + debounce), CloudManager.gd (Firebase integration, real-time listeners), GachaSystem.gd (full pity system, duplicate → shard conversion), AbilityDatabase.gd (12 generic + 99 unique Epic abilities)."
+          },
+          {
+            subtitle: "Planned Systems",
+            text: "HouseManager.gd, TriarchyManager.gd, TerritoryManager.gd, SeasonManager.gd, ChatManager.gd, ServerManager.gd — all fully specced in the GDD with data schemas and Cloud Functions for server-side validation and anti-cheat."
+          }
+        ]
+      },
+      {
+        title: "Launch Scope & Roadmap",
+        content: [
+          "**Launch (Month 1–3):** 66 heroes, full gacha system, Houses + Triarchies, Territory Wars, Season 1 cycle.",
+          "**Season 2 (Month 4–6):** 20 new heroes, hero skins, portrait frames, balance patches.",
+          "**Season 3 (Month 7–9):** 20 more heroes, PvP Arena (ranked), Guild vs Guild events.",
+          "**Season 4 (Month 10–12):** Final 26 heroes completing the 132-hero roster, major expansion mode, 1-year anniversary.",
+          "**Year 1 Targets:** 100,000 downloads, 10,000 DAU, 4% payer conversion, $1M ARR.",
+          "**Year 3 Targets:** 1,000,000 downloads, 150,000 DAU, $27M ARR."
+        ]
+      },
+      {
+        title: "Art Investment Note",
+        content: [
+          "All character art currently in the project is AI-generated placeholder art created to visualize hero concepts during early production. I have designed 132 complete heroes — all stats, abilities, tribal identities, and archetypes are fully documented.",
+          "**Estimated art production cost at launch scope (66 heroes): ~$79,000 — covering portraits, battle sprite sets (5 animations each), UI assets, VFX, and main hub artwork.**",
+          "I am actively seeking investors or publishing partners to fund the art pipeline and bring Triarchy: Houses of Mythos to market."
         ]
       }
     ]

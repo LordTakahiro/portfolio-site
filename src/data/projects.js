@@ -1,3 +1,4 @@
+import triarchyImg from '../assets/Triarchy.png';
 import championsImg from '../assets/Champions of Rymora.png';
 import battlerImg from '../assets/Battler.png';
 import crestfallImg from '../assets/Crestfall.png';
@@ -6,6 +7,20 @@ import falshariImg from '../assets/Fal\'Shari.png';
 import oneShotImg from '../assets/One-Shot.png';
 
 export const projects = [
+  {
+    id: 0,
+    slug: "triarchy-houses-of-mythos",
+    title: "Triarchy: Houses of Mythos",
+    subtitle: "Mobile Gacha RPG",
+    description: "A mobile gacha RPG where players collect heroes, join guilds called Houses, and form 3-way alliances called Triarchies. Every 90 days, alliances dissolve and reform — creating Game of Thrones-style politics in a mobile idle RPG framework. 132 heroes designed across 11 tribes, with full GDD, combat engine, and Firebase backend architecture.",
+    tags: ["Gacha RPG", "Mobile", "Godot 4", "Systems Design", "GDD", "Firebase"],
+    featured: true,
+    notionUrl: null,
+    image: triarchyImg,
+    role: "Lead Game Designer & Developer",
+    team: "Solo",
+    status: "In Active Development — Seeking Investment for Art Production"
+  },
   {
     id: 1,
     slug: "champions-of-rymora",

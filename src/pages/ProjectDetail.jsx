@@ -124,6 +124,13 @@ const ProjectDetail = () => {
                 </motion.div>
               )}
 
+              {content.aiArtNotice && (
+                <div className="project-detail__ai-notice">
+                  <span className="project-detail__ai-notice-label">⚠ Art Notice</span>
+                  <p>{content.aiArtNotice}</p>
+                </div>
+              )}
+
               {content.carouselImages && content.carouselImages.length > 0 && (
                 <motion.div
                   className="project-detail__section"
@@ -132,10 +139,10 @@ const ProjectDetail = () => {
                   viewport={{ once: true, margin: '-100px' }}
                   transition={{ duration: 0.3 }}
                 >
-                  <h2>Gallery</h2>
+                  <h2>Legendary Heroes Gallery</h2>
                   <ImageCarousel
                     images={content.carouselImages}
-                    height={slug === 'champions-of-rymora' ? 800 : 600}
+                    height={slug === 'champions-of-rymora' ? 800 : slug === 'triarchy-houses-of-mythos' ? 750 : 600}
                   />
                 </motion.div>
               )}
@@ -176,12 +183,14 @@ const ProjectDetail = () => {
                 </motion.div>
               ))}
 
-              <div className="project-detail__cta">
-                <p>This project is also available with additional formatting and media on Notion.</p>
-                <Button variant="primary" href={project.notionUrl}>
-                  View on Notion
-                </Button>
-              </div>
+              {project.notionUrl && (
+                <div className="project-detail__cta">
+                  <p>This project is also available with additional formatting and media on Notion.</p>
+                  <Button variant="primary" href={project.notionUrl}>
+                    View on Notion
+                  </Button>
+                </div>
+              )}
             </motion.div>
           )}
         </div>
