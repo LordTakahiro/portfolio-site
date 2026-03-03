@@ -681,11 +681,11 @@ export const projectContent = {
     carouselImages: [
       { src: sarathielFrame, alt: "Sarathiel – Angelic Legendary Hero", caption: "Sarathiel (Angelic)" },
       { src: baelFrame, alt: "Bael – Infernal Legendary Hero", caption: "Bael (Infernal)" },
-      { src: nyrathisFrame, alt: "Nyrathis – Undead Legendary Hero", caption: "Nyrathis (Undead)" },
+      { src: nyrathisFrame, alt: "Nyrathis – Shadow Legendary Hero", caption: "Nyrathis (Shadow)" },
       { src: sekhmetFrame, alt: "Sekhmet – Egyptian Legendary Hero", caption: "Sekhmet (Egyptian)" },
       { src: sigrunFrame, alt: "Sigrun – Norse Legendary Hero", caption: "Sigrun (Norse)" },
       { src: khorrathFrame, alt: "Khorrrath – Draconic Legendary Hero", caption: "Khorrath (Draconic)" },
-      { src: malachaiFrame, alt: "Malachai – Shadow Legendary Hero", caption: "Malachai (Shadow)" },
+      { src: malachaiFrame, alt: "Malachai – Undead Legendary Hero", caption: "Malachai (Undead)" },
       { src: cernunn, alt: "Cernunn – Gaia Legendary Hero", caption: "Cernunn (Gaia)" },
       { src: calypsa, alt: "Calyssa – Aquatic Legendary Hero", caption: "Calyssa (Aquatic)" },
       { src: pucklynFrame, alt: "Pucklyn – Fae Legendary Hero", caption: "Pucklyn (Fae)" },
@@ -796,6 +796,13 @@ export const projectContent = {
           "All character art currently in the project is AI-generated placeholder art created to visualize hero concepts during early production. I have designed 132 complete heroes — all stats, abilities, tribal identities, and archetypes are fully documented.",
           "**Estimated art production cost at launch scope (66 heroes): ~$79,000 — covering portraits, battle sprite sets (5 animations each), UI assets, VFX, and main hub artwork.**",
           "I am actively seeking investors or publishing partners to fund the art pipeline and bring Triarchy: Houses of Mythos to market."
+        ]
+      },
+      {
+        title: "Design Documentation",
+        content: [
+          "The full Game Design Document (GDD) and Technical Design Document (TDD) for Triarchy: Houses of Mythos are available upon request for hiring managers, investors, and collaborators.",
+          "**To request access, please reach out via the contact form or email listed on this site.**"
         ]
       }
     ]

@@ -56,7 +56,7 @@ export const projects = [
     subtitle: "Narrative Design Project",
     description: "An extensive worldbuilding project featuring the Fal'shari, a fel-driven research collective, with deep lore for original characters Seraphine Dawnseeker and Doctor Aldrich Sinclaire. Integrates directly into World of Warcraft's timeline, locations, and magical cosmology.",
     tags: ["Narrative Design", "Worldbuilding", "Character Design", "Lore", "Writing"],
-    featured: true,
+    featured: false,
     notionUrl: "https://www.notion.so/Fal-shari-Aldrich-Sinclaire-Seraphine-Dawnseeker-Warcraft-Lore-Bible-2f5d8290663f80f79281da70ede51c66",
     image: falshariImg,
     role: "Narrative Designer & Worldbuilder",
