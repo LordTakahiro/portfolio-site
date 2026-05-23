@@ -18,7 +18,7 @@ export const projects = [
     notionUrl: null,
     image: triarchyImg,
     role: "Lead Game Designer & Developer",
-    team: "Michael Melendez, Zachary Butters",
+    team: "Michael Melendez, Zachary Butter",
     status: "In Active Development — Seeking Investment for Art Production"
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     notionUrl: "https://www.notion.so/Champions-of-Rymora-Game-Design-Project-2f5d8290663f8065b120f6f870c5287a",
     image: championsImg,
     role: "Lead Systems Designer",
-    team: "Michael Melendez, Zachary Butters",
+    team: "Michael Melendez, Zachary Butter",
     status: "In development (rules engine complete, card pool in progress)"
   },
   {
